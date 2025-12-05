@@ -1,9 +1,5 @@
 const swaggerJSDoc = require('swagger-jsdoc');
-<<<<<<< HEAD
  
-=======
-
->>>>>>> origin/master
 const swaggerDefinition = {
   openapi: '3.0.0',
   info: {
@@ -80,24 +76,13 @@ const swaggerDefinition = {
     bearerAuth: []
   }]
 };
-<<<<<<< HEAD
  
-=======
-
->>>>>>> origin/master
 const options = {
   swaggerDefinition,
   // Paths to files containing OpenAPI definitions
   apis: ['./src/presentation/routes/*.js'],
 };
-<<<<<<< HEAD
  
 const swaggerSpec = swaggerJSDoc(options);
  
 module.exports = swaggerSpec;
-=======
-
-const swaggerSpec = swaggerJSDoc(options);
-
-module.exports = swaggerSpec;
->>>>>>> origin/master
