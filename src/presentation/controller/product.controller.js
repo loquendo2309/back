@@ -11,11 +11,7 @@ class ProductController {
     getById = async (req, res) => {
         const { id } = req.params;
         const product = await this.productService.getProductById(id);
-        if (product) {
-            res.status(200).json(product);
-        } else {
-            res.status(404).json({ message: 'Product not found' });
-        }
+        res.status(200).json(product);
     }
 
     create = async (req, res) => {
@@ -26,11 +22,7 @@ class ProductController {
     update = async (req, res) => {
         const { id } = req.params;
         const product = await this.productService.updateProduct(id, req.body);
-        if (product) {
-            res.status(200).json(product);
-        } else {
-            res.status(404).json({ message: 'Product not found' });
-        }
+        res.status(200).json(product);
     }
 
     delete = async (req, res) => {

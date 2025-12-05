@@ -1,5 +1,6 @@
 const User = require('../../domain/entities/user.entity');
 const bcrypt = require('bcryptjs');
+const { ConflictError, NotFoundError } = require('../../domain/errors');
 
 class UserService {
     constructor(userRepository, roleRepository) {
@@ -12,7 +13,11 @@ class UserService {
     }
 
     async getUserById(id) {
-        return this.userRepository.getById(id);
+        const user = await this.userRepository.getById(id);
+        if (!user) {
+            throw new NotFoundError(`User with id ${id} not found`);
+        }
+        return user;
     }
 
     async createUser(userData) {
@@ -21,7 +26,7 @@ class UserService {
         // Check if user already exists
         const existingUser = await this.userRepository.getByEmail(email);
         if (existingUser) {
-            throw new Error('User with this email already exists');
+            throw new ConflictError('User with this email already exists');
         }
 
         // Hash the password
@@ -43,6 +48,11 @@ class UserService {
     async updateUser(id, userData) {
         const { name, email, password, roles } = userData;
 
+        const existingUser = await this.userRepository.getById(id);
+        if (!existingUser) {
+            throw new NotFoundError(`User with id ${id} not found`);
+        }
+
         let hashedPassword;
         if (password) {
             hashedPassword = await bcrypt.hash(password, 10);
@@ -62,6 +72,10 @@ class UserService {
     }
 
     async deleteUser(id) {
+        const user = await this.userRepository.getById(id);
+        if (!user) {
+            throw new NotFoundError(`User with id ${id} not found`);
+        }
         return this.userRepository.delete(id);
     }
 
@@ -70,7 +84,7 @@ class UserService {
         if (!roleNames || roleNames.length === 0) {
             // Assign a default role if none are provided, e.g., 'user'
             const defaultRole = await this.roleRepository.getByName('user');
-            if (!defaultRole) throw new Error("Default role 'user' not found.");
+            if (!defaultRole) throw new NotFoundError("Default role 'user' not found.");
             return [defaultRole.id];
         }
 
@@ -78,7 +92,7 @@ class UserService {
         for (const roleName of roleNames) {
             const role = await this.roleRepository.getByName(roleName);
             if (!role) {
-                throw new Error(`Role '${roleName}' not found.`);
+                throw new NotFoundError(`Role '${roleName}' not found.`);
             }
             roleIds.push(role.id);
         }

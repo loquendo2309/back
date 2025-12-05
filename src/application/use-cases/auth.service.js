@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+const { UnauthorizedError } = require('../../domain/errors');
 
 class AuthService {
     constructor(userRepository) {
@@ -9,12 +10,12 @@ class AuthService {
     async login(email, password) {
         const user = await this.userRepository.getByEmail(email);
         if (!user) {
-            throw new Error('Invalid credentials');
+            throw new UnauthorizedError('Invalid credentials');
         }
 
         const isPasswordValid = await bcrypt.compare(password, user.password);
         if (!isPasswordValid) {
-            throw new Error('Invalid credentials');
+            throw new UnauthorizedError('Invalid credentials');
         }
 
         // the user object from the repository might have the full role objects
