@@ -1,0 +1,204 @@
+{
+  "orders": [
+    {
+      "producto": "Laptop Dell XPS",
+      "descripcion": "Laptop Dell XPS 15 con procesador Intel Core i7-13700H, 16GB RAM DDR5, 512GB SSD NVMe, pantalla 15.6' 4K OLED",
+      "cantidad": 2,
+      "precio": 1500,
+      "descuento": 10,
+      "cliente": "Juan Pérez",
+      "estado": "pendiente",
+      "fechaEntrega": "2025-12-20"
+    },
+    {
+      "producto": "Tarjeta Gráfica NVIDIA RTX 4090",
+      "descripcion": "Tarjeta gráfica NVIDIA GeForce RTX 4090 24GB GDDR6X para gaming profesional y rendering 3D",
+      "cantidad": 1,
+      "precio": 2000,
+      "descuento": 5,
+      "cliente": "María González",
+      "estado": "procesando",
+      "fechaEntrega": "2025-12-25"
+    },
+    {
+      "producto": "Procesador Intel Core i9",
+      "descripcion": "Procesador Intel Core i9-13900K, 24 núcleos (8P+16E), 32 threads, hasta 5.8GHz Turbo",
+      "cantidad": 3,
+      "precio": 600,
+      "descuento": 15,
+      "cliente": "Carlos Rodríguez",
+      "estado": "enviado",
+      "fechaEntrega": "2025-12-18"
+    },
+    {
+      "producto": "RAM Corsair 32GB DDR5",
+      "descripcion": "Memoria RAM Corsair Vengeance DDR5 32GB (2x16GB) 6000MHz RGB con disipador de calor",
+      "cantidad": 4,
+      "precio": 180,
+      "descuento": 10,
+      "cliente": "Ana Martínez",
+      "estado": "pendiente",
+      "fechaEntrega": "2026-01-15"
+    },
+    {
+      "producto": "Monitor LG UltraWide",
+      "descripcion": "Monitor LG UltraWide 34' 3440x1440 144Hz IPS con HDR10 y FreeSync Premium Pro",
+      "cantidad": 1,
+      "precio": 550,
+      "descuento": 0,
+      "cliente": "Roberto Silva",
+      "estado": "entregado",
+      "fechaEntrega": "2025-12-10"
+    },
+    {
+      "producto": "SSD Samsung 1TB NVMe",
+      "descripcion": "SSD Samsung 980 PRO 1TB NVMe M.2 PCIe 4.0 con velocidades de lectura hasta 7000MB/s",
+      "cantidad": 5,
+      "precio": 120,
+      "descuento": 12,
+      "cliente": "Laura Fernández",
+      "estado": "procesando",
+      "fechaEntrega": "2025-12-22"
+    },
+    {
+      "producto": "Laptop ASUS ROG",
+      "descripcion": "Laptop ASUS ROG Strix G16 con Intel i9-13980HX, RTX 4070 8GB, 32GB RAM, 1TB SSD, pantalla 16' QHD 240Hz",
+      "cantidad": 1,
+      "precio": 2200,
+      "descuento": 8,
+      "cliente": "Diego Torres",
+      "estado": "pendiente",
+      "fechaEntrega": "2026-01-05"
+    },
+    {
+      "producto": "Motherboard ASUS ROG",
+      "descripcion": "Motherboard ASUS ROG Maximus Z790 Hero, Socket LGA1700, DDR5, PCIe 5.0, WiFi 6E",
+      "cantidad": 2,
+      "precio": 650,
+      "descuento": 10,
+      "cliente": "Patricia Ruiz",
+      "estado": "enviado",
+      "fechaEntrega": "2025-12-19"
+    },
+    {
+      "producto": "Teclado Mecánico Logitech",
+      "descripcion": "Teclado mecánico Logitech G Pro X TKL con switches intercambiables GX Blue, RGB personalizable",
+      "cantidad": 6,
+      "precio": 150,
+      "descuento": 20,
+      "cliente": "Fernando López",
+      "estado": "pendiente",
+      "fechaEntrega": "2025-12-28"
+    },
+    {
+      "producto": "Mouse Gamer Razer",
+      "descripcion": "Mouse Razer DeathAdder V3 Pro inalámbrico, sensor óptico 30000 DPI, 90 horas de batería",
+      "cantidad": 8,
+      "precio": 130,
+      "descuento": 15,
+      "cliente": "Sofía Morales",
+      "estado": "procesando",
+      "fechaEntrega": "2025-12-30"
+    },
+    {
+      "producto": "Procesador AMD Ryzen 9",
+      "descripcion": "Procesador AMD Ryzen 9 7950X 16 núcleos, 32 threads, hasta 5.7GHz, arquitectura Zen 4",
+      "cantidad": 2,
+      "precio": 580,
+      "descuento": 10,
+      "cliente": "Miguel Ángel Castro",
+      "estado": "pendiente",
+      "fechaEntrega": "2026-01-10"
+    },
+    {
+      "producto": "Fuente de Poder 850W",
+      "descripcion": "Fuente de poder Corsair RM850x 850W 80+ Gold modular completamente, certificación 80 PLUS Gold",
+      "cantidad": 3,
+      "precio": 140,
+      "descuento": 5,
+      "cliente": "Gabriela Vargas",
+      "estado": "enviado",
+      "fechaEntrega": "2025-12-21"
+    },
+    {
+      "producto": "Monitor Samsung 27\"",
+      "descripcion": "Monitor Samsung Odyssey G7 27' curvo 2560x1440 240Hz 1ms QLED con G-Sync y HDR600",
+      "cantidad": 2,
+      "precio": 500,
+      "descuento": 12,
+      "cliente": "Andrés Jiménez",
+      "estado": "pendiente",
+      "fechaEntrega": "2025-12-27"
+    },
+    {
+      "producto": "Case Gamer RGB",
+      "descripcion": "Case NZXT H510 Elite con panel de vidrio templado, 4 ventiladores RGB incluidos, soporte ATX",
+      "cantidad": 4,
+      "precio": 180,
+      "descuento": 18,
+      "cliente": "Valentina Rojas",
+      "estado": "procesando",
+      "fechaEntrega": "2026-01-08"
+    },
+    {
+      "producto": "Webcam Logitech HD",
+      "descripcion": "Webcam Logitech C920 HD Pro 1080p con micrófono estéreo y enfoque automático",
+      "cantidad": 10,
+      "precio": 80,
+      "descuento": 10,
+      "cliente": "Ricardo Mendoza",
+      "estado": "pendiente",
+      "fechaEntrega": "2025-12-26"
+    },
+    {
+      "producto": "Auriculares HyperX Cloud",
+      "descripcion": "Auriculares gaming HyperX Cloud II con sonido envolvente 7.1, micrófono con cancelación de ruido",
+      "cantidad": 7,
+      "precio": 100,
+      "descuento": 15,
+      "cliente": "Camila Herrera",
+      "estado": "enviado",
+      "fechaEntrega": "2025-12-23"
+    },
+    {
+      "producto": "Laptop Lenovo ThinkPad",
+      "descripcion": "Laptop Lenovo ThinkPad X1 Carbon Gen 11, Intel i7-1365U, 16GB RAM, 512GB SSD, pantalla 14' 2.8K OLED",
+      "cantidad": 1,
+      "precio": 1800,
+      "descuento": 7,
+      "cliente": "Jorge Ramírez",
+      "estado": "pendiente",
+      "fechaEntrega": "2026-01-12"
+    },
+    {
+      "producto": "Tarjeta Gráfica AMD Radeon RX 7900",
+      "descripcion": "Tarjeta gráfica AMD Radeon RX 7900 XTX 24GB GDDR6 con arquitectura RDNA 3 y Ray Tracing",
+      "cantidad": 1,
+      "precio": 1000,
+      "descuento": 5,
+      "cliente": "Isabella Ortiz",
+      "estado": "procesando",
+      "fechaEntrega": "2025-12-29"
+    },
+    {
+      "producto": "Impresora HP LaserJet",
+      "descripcion": "Impresora HP LaserJet Pro M404dn monocromática, 38 ppm, impresión dúplex automática",
+      "cantidad": 3,
+      "precio": 350,
+      "descuento": 10,
+      "cliente": "Daniel Soto",
+      "estado": "pendiente",
+      "fechaEntrega": "2026-01-20"
+    },
+    {
+      "producto": "Laptop HP Pavilion",
+      "descripcion": "Laptop HP Pavilion 15 con AMD Ryzen 7 7730U, 16GB RAM, 512GB SSD, pantalla 15.6' FHD IPS",
+      "cantidad": 2,
+      "precio": 900,
+      "descuento": 12,
+      "cliente": "Natalia Cruz",
+      "estado": "enviado",
+      "fechaEntrega": "2025-12-24"
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 class ProductController {
-    constructor(productService) { // Depende del Caso de Uso
+    constructor(productService) { // Depends on the Use Case
         this.productService = productService;
     }
-    
-    getAll = async (req, res) => { // Usamos arrow fn para no perder el 'this'
+
+    getAll = async (req, res) => { // Using arrow fn to preserve 'this' context
         const products = await this.productService.getAllProducts();
         res.status(200).json(products);
     }

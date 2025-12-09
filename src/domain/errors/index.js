@@ -25,6 +25,7 @@ class UnauthorizedError extends BaseError {
 }
 
 module.exports = {
+    BaseError,
     NotFoundError,
     ConflictError,
     BadRequestError,

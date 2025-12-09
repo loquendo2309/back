@@ -4,7 +4,7 @@ const authenticateToken = require('../middlewares/auth.middleware');
 const isAdmin = require('../middlewares/admin.middleware');
 const asyncHandler = require('../utils/async.handler');
 
-// Esta es la "Inyección de Dependencias" manual
+// Manual Dependency Injection
 const ProductService = require('../../application/use-cases/product.service');
 
 const ProductMongoRepository = require('../../infrastructure/repositories/database/mongo/product.mongo.repository');
