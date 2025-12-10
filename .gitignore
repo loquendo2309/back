@@ -9,10 +9,6 @@ npm-debug.log*
 yarn-debug.log*
 logs/
 
-# Test data files
-seed-data.js
-order-test-data.json
-
 # Claude AI
 .claude/
 
