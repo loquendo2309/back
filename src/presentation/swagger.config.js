@@ -1,5 +1,5 @@
 const swaggerJSDoc = require('swagger-jsdoc');
- 
+
 const swaggerDefinition = {
   openapi: '3.0.0',
   info: {
@@ -19,29 +19,24 @@ const swaggerDefinition = {
         type: 'http',
         scheme: 'bearer',
         bearerFormat: 'JWT',
+      },
+      // Nuevo: campo por endpoint para header Authorization
+      apiKeyAuth: {
+        type: 'apiKey',
+        in: 'header',
+        name: 'Authorization'
       }
     },
     schemas: {
       User: {
         type: 'object',
         properties: {
-          id: {
-            type: 'string',
-            example: '60c72b2f9b1e8a001f8e4caa'
-          },
-          name: {
-            type: 'string',
-            example: 'John Doe'
-          },
-          email: {
-            type: 'string',
-            example: 'jhon.doe@example.com'
-          },
+          id: { type: 'string', example: '60c72b2f9b1e8a001f8e4caa' },
+          name: { type: 'string', example: 'John Doe' },
+          email: { type: 'string', example: 'jhon.doe@example.com' },
           roles: {
             type: 'array',
-            items: {
-              type: 'string'
-            },
+            items: { type: 'string' },
             example: ['user']
           }
         }
@@ -49,40 +44,26 @@ const swaggerDefinition = {
       UserInput: {
         type: 'object',
         properties: {
-          name: {
-            type: 'string',
-            example: 'John Doe'
-          },
-          email: {
-            type: 'string',
-            example: 'jhon.doe@exmaple.com'
-          },
-          password: {
-            type: 'string',
-            example: 'password123'
-          },
+          name: { type: 'string', example: 'John Doe' },
+          email: { type: 'string', example: 'jhon.doe@exmaple.com' },
+          password: { type: 'string', example: 'password123' },
           roles: {
             type: 'array',
-            items: {
-              type: 'string'
-            },
+            items: { type: 'string' },
             example: ['user']
           }
         }
       }
     }
   },
-  security: [{
-    bearerAuth: []
-  }]
+  // Puedes mantener seguridad global si quieres forzar token en todo:
+  security: [{ bearerAuth: [] }]
 };
- 
+
 const options = {
   swaggerDefinition,
-  // Paths to files containing OpenAPI definitions
   apis: ['./src/presentation/routes/*.js'],
 };
- 
+
 const swaggerSpec = swaggerJSDoc(options);
- 
 module.exports = swaggerSpec;
