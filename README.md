@@ -100,10 +100,6 @@ back/
 ## Instalación
 
 ### 1. Clonar el repositorio
-```bash
-git clone <url-del-repositorio>
-cd back
-```
 
 ### 2. Instalar dependencias
 ```bash
@@ -123,7 +119,7 @@ JWT_SECRET=tu_clave_secreta_super_segura
 Asegúrate de tener MongoDB ejecutándose localmente o usa MongoDB Atlas.
 
 ### 5. Ejecutar la aplicación
-```bash
+```
 npm run dev
 ```
 

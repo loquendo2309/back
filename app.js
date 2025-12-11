@@ -17,12 +17,14 @@ const userRoutes = require('./src/presentation/routes/user.routes');
 const roleRoutes = require('./src/presentation/routes/role.routes');
 const authRoutes = require('./src/presentation/routes/auth.routes');
 const orderRoutes = require('./src/presentation/routes/order.routes');
+const cuponRoutes = require('./src/presentation/routes/cupon.routes');
 
 app.use('/api/v1/products', productRoutes);
 app.use('/api/v1/users', userRoutes);
 app.use('/api/v1/roles', roleRoutes);
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/orders', orderRoutes);
+app.use('/api/v1/cupons', cuponRoutes);
 
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('./src/presentation/swagger.config');

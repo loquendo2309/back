@@ -9,9 +9,6 @@ npm-debug.log*
 yarn-debug.log*
 logs/
 
-# Claude AI
-.claude/
-
 # IDE
 .vscode/
 .idea/
