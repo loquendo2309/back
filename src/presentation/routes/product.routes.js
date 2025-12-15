@@ -62,6 +62,7 @@ router.get('/', asyncHandler(productController.getAll));
  *         description: Product not found
  */
 router.get('/:id', asyncHandler(productController.getById));
+<<<<<<< HEAD
 
 /**
  * @swagger
@@ -142,5 +143,11 @@ router.put('/:id', asyncHandler(productController.update));
  *         description: Product not found
  */
 router.delete('/:id', asyncHandler(productController.delete));
+=======
+//router.post('/', [authenticateToken, isAdmin], asyncHandler(productController.create));
+router.post('/',  asyncHandler(productController.create));
+router.put('/:id', [authenticateToken, isAdmin], asyncHandler(productController.update));
+router.delete('/:id', [authenticateToken, isAdmin], asyncHandler(productController.delete));
+>>>>>>> c5778368225291703407cc32ab4ef64af94008c2
 
 module.exports = router;

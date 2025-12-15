@@ -4,13 +4,13 @@ class CuponController {
     }
     
     getAll = async (req, res) => { // Usamos arrow fn para no perder el 'this'
-        const order = await this.cuponService.getAllOrders();
+        const order = await this.cuponService.getAllCupons();
         res.status(200).json(order);
     }
 
     getById = async (req, res) => {
         const { id } = req.params;
-        const cupon = await this.cuponService.getOrderById(id);
+        const cupon = await this.cuponService.getCuponById(id);
         if (cupon) {
             res.status(200).json(cupon);
         } else {

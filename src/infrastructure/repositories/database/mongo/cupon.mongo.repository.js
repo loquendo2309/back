@@ -5,7 +5,7 @@ const Cupon = require('../../../../domain/entities/cupon.entity');
 class CuponMongoRepository extends CuponRepository {
     async getAll() {
         const cupon = await CuponModel.find();
-        return cupon.map(p => new cupon(p._id.toString(),
+        return cupon.map(p => new Cupon(p._id.toString(),
         p.id_user.toString(), 
         p.init_date.toString(),
         p.end_date.toString(),
@@ -28,6 +28,9 @@ class CuponMongoRepository extends CuponRepository {
     }
 
     async create(cuponEntity) {
+
+         console.log('Recibiendo cuponEntity:', cuponEntity);
+
         const newCupon = new CuponModel({
             id_user: cuponEntity.id_user,
             init_date: cuponEntity.init_date,
@@ -37,7 +40,7 @@ class CuponMongoRepository extends CuponRepository {
         });
         const savedCupon = await newCupon.save();
         return new Cupon(savedCupon._id.toString(), 
-        savedCupon.id_user, 
+        savedCupon.id_user.toString(), 
         savedCupon.init_date,
             savedCupon.end_date,
             savedCupon.value

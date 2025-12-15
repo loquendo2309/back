@@ -61,6 +61,7 @@ router.get('/', asyncHandler(cuponController.getAll));
  *         description: Cupon not found
  */
 router.get('/:id', asyncHandler(cuponController.getById));
+<<<<<<< HEAD
 
 /**
  * @swagger
@@ -146,5 +147,11 @@ router.put('/:id', asyncHandler(cuponController.update));
  *         description: Cupon not found
  */
 router.delete('/:id', asyncHandler(cuponController.delete));
+=======
+//router.post('/', [authenticateToken, isAdmin], asyncHandler(cuponController.create));
+router.post('/',  asyncHandler(cuponController.create));
+router.put('/:id', [authenticateToken, isAdmin], asyncHandler(cuponController.update));
+router.delete('/:id', [authenticateToken, isAdmin], asyncHandler(cuponController.delete));
+>>>>>>> c5778368225291703407cc32ab4ef64af94008c2
 
 module.exports = router;
