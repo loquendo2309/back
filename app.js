@@ -22,8 +22,8 @@ const orderRoutes = require('./src/presentation/routes/order.routes');
 app.use('/api/v1/products', productRoutes);
 app.use('/api/v1/users', userRoutes);
 app.use('/api/v1/roles', roleRoutes);
-app.use('/api/v1/cupon', cuponRoutes);
-app.use('/api/v1/order', orderRoutes);
+app.use('/api/v1/cupons', cuponRoutes);
+app.use('/api/v1/orders', orderRoutes);
 app.use('/api/v1/auth', authRoutes); // Usar rutas de autenticación
 
 const swaggerUi = require('swagger-ui-express');
